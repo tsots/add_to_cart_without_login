@@ -1,4 +1,5 @@
 import ProductCard from "@/app/components/ProductCard";
+// import BeefOne from "/public/assets/Beef-Open.png";
 
 const dummyProducts = [
   {
@@ -7,8 +8,7 @@ const dummyProducts = [
     mrp: 29.99,
     salePrice: 19.99,
     percentOff: 33,
-    thumbnail:
-      "https://images.unsplash.com/photo-1527719327859-c6ce80353573?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    thumbnail: "/assets/Beef-Open.png",
   },
   {
     id: "2",
@@ -16,8 +16,7 @@ const dummyProducts = [
     mrp: 79.99,
     salePrice: 59.99,
     percentOff: 25,
-    thumbnail:
-      "https://images.unsplash.com/photo-1562183241-b937e95585b6?q=80&w=2565&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    thumbnail: "/assets/Chicken-Open.png",
   },
   {
     id: "3",
@@ -25,8 +24,7 @@ const dummyProducts = [
     mrp: 14.99,
     salePrice: 9.99,
     percentOff: 33,
-    thumbnail:
-      "https://images.unsplash.com/photo-1604671748253-e683240e7efa?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    thumbnail: "/assets/Seafood-Open.png",
   },
   {
     id: "4",
@@ -34,17 +32,7 @@ const dummyProducts = [
     mrp: 49.99,
     salePrice: 39.99,
     percentOff: 20,
-    thumbnail:
-      "https://images.unsplash.com/photo-1667411424598-96b5e5f3139b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-  },
-  {
-    id: "5",
-    title: "Wireless Earbuds",
-    mrp: 59.99,
-    salePrice: 49.99,
-    percentOff: 17,
-    thumbnail:
-      "https://images.unsplash.com/photo-1655804439989-24758d6e96b8?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    thumbnail: "/assets/Curry-Open.png",
   },
 ];
 
