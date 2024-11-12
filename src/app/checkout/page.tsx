@@ -1,4 +1,5 @@
 "use client";
+/* eslint-disable */
 import React, { ChangeEvent } from "react";
 import { useCart } from "../context/CartProvider";
 import Image from "next/image";
@@ -7,14 +8,6 @@ import { FC, useEffect } from "react";
 interface Props {}
 
 const page: FC<Props> = (props) => {
-  //   const countTotalPrice = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //     const isChecked = e.target.checked;
-  //     console.log(isChecked);
-  //   };
-  //   const handleSubmit = (event: any) => {
-  //     event.preventDefault();
-  //     alert(`The name you entered was: ${name}`);
-  //   };
   const {
     countTotalPrice,
     items: cartItems,

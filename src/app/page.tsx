@@ -1,5 +1,4 @@
 import ProductCard from "@/app/components/ProductCard";
-import Image from "next/image";
 
 const dummyProducts = [
   {

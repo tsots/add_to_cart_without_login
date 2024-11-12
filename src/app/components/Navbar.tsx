@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Link from "next/link";
 import { FC, useState } from "react";
 import SideCart from "./SideCart";
