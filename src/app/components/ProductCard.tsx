@@ -10,30 +10,33 @@ export const isProduction = process.env.NODE_ENV === "production";
 const env = process.env.NODE_ENV;
 
 const ProductCard: FC<Props> = ({ product }) => {
-  const myImages = () => {
-    if (env === "development") {
-      <Image
-        src={product.thumbnail}
-        alt={product.title}
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        priority={true}
-        className="w-full aspect-square object-cover"
-      />;
-    } else {
-      <Image
-        src={product.thumbnail}
-        alt={product.title}
-        fill
-        sizes="(max-width: 768px) 100vw, 33vw"
-        priority={true}
-        className="w-full aspect-square object-cover"
-      />;
-    }
-  };
+  // const myImages = () => {
+  //   if (env === "development") {
+
+  //   } else {
+  //     <Image
+  //       src={product.thumbnail}
+  //       alt={product.title}
+  //       fill
+  //       sizes="(max-width: 768px) 100vw, 33vw"
+  //       priority={true}
+  //       className="w-full aspect-square object-cover"
+  //     />;
+  //   }
+  // };
   return (
     <div className="w-full bg-white shadow-md rounded overflow-hidden relative">
-      <div className="w-full aspect-square relative"></div>
+      <div className="w-full aspect-square relative">
+        <Image
+          src={product.thumbnail}
+          alt={product.title}
+          fill
+          sizes="(max-width: 768px) 100vw, 33vw"
+          priority={true}
+          className="w-full aspect-square object-cover"
+        />
+        ;
+      </div>
 
       <div className="p-4 space-y-2">
         <h1 className="font-semibold text-2xl">{product.title}</h1>
