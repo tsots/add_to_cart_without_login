@@ -2,40 +2,35 @@ import Image from "next/image";
 import { FC } from "react";
 import { Product } from "../context/CartProvider";
 import BuyingOptions from "./BuyingOptions";
+const basePath = process.env.NEXT_PUBLIC_BASEPATH;
 
 interface Props {
   product: Product;
 }
-export const isProduction = process.env.NODE_ENV === "production";
-const env = process.env.NODE_ENV;
+// export const isProduction = process.env.NODE_ENV === "production";
+const env = process.env.NODE_ENV === "production";
 
 const ProductCard: FC<Props> = ({ product }) => {
-  // const myImages = () => {
-  //   if (env === "development") {
+  console.log(basePath);
 
-  //   } else {
-  //     <Image
-  //       src={product.thumbnail}
-  //       alt={product.title}
-  //       fill
-  //       sizes="(max-width: 768px) 100vw, 33vw"
-  //       priority={true}
-  //       className="w-full aspect-square object-cover"
-  //     />;
-  //   }
-  // };
   return (
     <div className="w-full bg-white shadow-md rounded overflow-hidden relative">
       <div className="w-full aspect-square relative">
-        <Image
-          src={product.thumbnail}
-          alt={product.title}
-          fill
-          sizes="(max-width: 768px) 100vw, 33vw"
-          priority={true}
-          className="w-full aspect-square object-cover"
-        />
-        ;
+        {env ? (
+          <Image
+            src={`basePath/{product.thumbnail}`}
+            alt=""
+            className="rounded object-cover"
+            fill
+          />
+        ) : (
+          <Image
+            src={product.thumbnail}
+            alt=""
+            className="rounded object-cover"
+            fill
+          />
+        )}
       </div>
 
       <div className="p-4 space-y-2">
@@ -58,3 +53,4 @@ const ProductCard: FC<Props> = ({ product }) => {
 };
 
 export default ProductCard;
+interface Props {}
