@@ -8,7 +8,7 @@ const dummyProducts = [
     mrp: 29.99,
     salePrice: 19.99,
     percentOff: 33,
-    thumbnail: "https://tsots.github.io/add_to_cart_without_login/assets/Beef-Open.png",
+    thumbnail: "/assets/Beef-Open.png",
   },
   {
     id: "2",
