@@ -1,4 +1,5 @@
 import ProductCard from "@/app/components/ProductCard";
+
 // import BeefOne from "/public/assets/Beef-Open.png";
 
 const dummyProducts = [
@@ -8,7 +9,7 @@ const dummyProducts = [
     mrp: 29.99,
     salePrice: 19.99,
     percentOff: 33,
-    thumbnail: "/assets/Beef-Open.png",
+    thumbnail: "/assets/Chicken-Open.png",
   },
   {
     id: "2",

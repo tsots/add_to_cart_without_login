@@ -9,6 +9,9 @@ interface Props {
   onRequestClose?(): void;
 }
 
+const basePath = "/add_to_cart_without_login";
+const isProd = process.env.NODE_ENV === "production";
+
 const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
   const {
     items: cartItems,
@@ -38,13 +41,23 @@ const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
         return (
           <div key={cartItem.product.id} className="p-4">
             <div className="flex space-x-4">
-              <Image
-                src={cartItem.product.thumbnail}
-                alt=""
-                width={64}
-                height={64}
-                className="rounded object-cover"
-              />
+              {isProd ? (
+                <Image
+                  src={`${basePath}/${cartItem.product.thumbnail}`}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="rounded object-cover"
+                />
+              ) : (
+                <Image
+                  src={cartItem.product.thumbnail}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="rounded object-cover"
+                />
+              )}
               <div className="flex-1">
                 <h2 className="font-semibold">Smartphone Case</h2>
                 <div className="flex text-gray-400 text-sm space-x-1">
