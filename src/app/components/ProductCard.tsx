@@ -2,7 +2,9 @@ import Image from "next/image";
 import { FC } from "react";
 import { Product } from "../context/CartProvider";
 import BuyingOptions from "./BuyingOptions";
-const basePath = process.env.NEXT_PUBLIC_BASEPATH;
+const basePath = "/add_to_cart_without_login";
+
+const isProd = process.env.NODE_ENV === "production";
 
 interface Props {
   product: Product;
@@ -16,7 +18,7 @@ const ProductCard: FC<Props> = ({ product }) => {
   return (
     <div className="w-full bg-white shadow-md rounded overflow-hidden relative">
       <div className="w-full aspect-square relative">
-        {env ? (
+        {isProd ? (
           <Image
             src={`${basePath}/{product.thumbnail}`}
             alt=""
