@@ -2,6 +2,8 @@
 import { FC } from "react";
 import { useCart } from "../context/CartProvider";
 import Image from "next/image";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 interface Props {
   visible?: boolean;
@@ -16,6 +18,9 @@ const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
     countTotalPrice,
     clearCart,
   } = useCart();
+  const session = useSession();
+  const isLoggedIn = status === "authenticated";
+  const router = useRouter();
 
   console.log(cartItems);
   return (
@@ -87,7 +92,21 @@ const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
           </p>
         </div>
 
-        <button className="border-2 border-orange-600 py-2 w-full rounded text-orange-600 uppercase">
+        <button
+          onClick={() => {
+            // if (isLoggedIn) {
+            //   console.log("send data to server");
+            // } else {
+            //   // signIn('credentials', {
+            //   //   email, password
+            //   // })
+            //   router.push("/auth/sign-in");
+            //   onRequestClose && onRequestClose();
+            // }
+            router.push("/checkout/");
+          }}
+          className="border-2 border-orange-600 py-2 w-full rounded text-orange-600 uppercase"
+        >
           Checkout
         </button>
         <button
