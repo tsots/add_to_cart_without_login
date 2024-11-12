@@ -46,6 +46,7 @@ const page: FC<Props> = (props) => {
                   <Image
                     src={cartItem.product.thumbnail}
                     alt=""
+                    priority
                     width={64}
                     height={64}
                     className="rounded object-cover"
