@@ -8,7 +8,7 @@ const dummyProducts = [
     mrp: 29.99,
     salePrice: 19.99,
     percentOff: 33,
-    thumbnail: "/add_to_cart_without_login/assets/Beef-Open.png",
+    thumbnail: "/assets/Beef-Open.png",
   },
   {
     id: "2",
@@ -16,7 +16,7 @@ const dummyProducts = [
     mrp: 79.99,
     salePrice: 59.99,
     percentOff: 25,
-    thumbnail: "/add_to_cart_without_login/assets/Chicken-Open.png",
+    thumbnail: "/assets/Chicken-Open.png",
   },
   {
     id: "3",
@@ -24,7 +24,7 @@ const dummyProducts = [
     mrp: 14.99,
     salePrice: 9.99,
     percentOff: 33,
-    thumbnail: "/add_to_cart_without_login/assets/Seafood-Open.png",
+    thumbnail: "/assets/Seafood-Open.png",
   },
   {
     id: "4",
@@ -32,7 +32,7 @@ const dummyProducts = [
     mrp: 49.99,
     salePrice: 39.99,
     percentOff: 20,
-    thumbnail: "/add_to_cart_without_login/assets/Curry-Open.png",
+    thumbnail: "/assets/Curry-Open.png",
   },
 ];
 
