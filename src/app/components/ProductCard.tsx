@@ -18,7 +18,7 @@ const ProductCard: FC<Props> = ({ product }) => {
       <div className="w-full aspect-square relative">
         {isProd ? (
           <Image
-            src={`${basePath}/{product.thumbnail}`}
+            src={`${basePath}/${product.thumbnail}`}
             alt=""
             className="rounded object-cover"
             fill
