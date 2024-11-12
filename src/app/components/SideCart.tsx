@@ -2,6 +2,7 @@
 import { FC } from "react";
 import { useCart } from "../context/CartProvider";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface Props {
   visible?: boolean;
@@ -16,6 +17,8 @@ const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
     countTotalPrice,
     clearCart,
   } = useCart();
+
+  const router = useRouter();
 
   console.log(cartItems);
   return (
@@ -83,11 +86,16 @@ const SideCart: FC<Props> = ({ visible, onRequestClose }) => {
             <span className="text-gray-400 font-normal">
               The total of your cart is:
             </span>
-            ${countTotalPrice()}
+            R {countTotalPrice()}
           </p>
         </div>
 
-        <button className="border-2 border-orange-600 py-2 w-full rounded text-orange-600 uppercase">
+        <button
+          onClick={() => {
+            router.push("/checkout/");
+          }}
+          className="border-2 border-orange-600 py-2 w-full rounded text-orange-600 uppercase"
+        >
           Checkout
         </button>
         <button

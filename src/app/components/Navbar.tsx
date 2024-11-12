@@ -107,8 +107,8 @@ const Navbar: FC<Props> = () => {
             </div>
           )}
 
-          <div className="flex items-center space-x-8">
-            <p className="font-bold text-gray-800">${countTotalPrice()}</p>
+          <div className="flex items-center">
+            <p className="font-bold text-gray-800">R{countTotalPrice()}</p>
 
             <button
               onClick={() => setShowSideCart((old) => !old)}
