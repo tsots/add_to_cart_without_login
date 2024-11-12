@@ -53,4 +53,3 @@ const ProductCard: FC<Props> = ({ product }) => {
 };
 
 export default ProductCard;
-interface Props {}
