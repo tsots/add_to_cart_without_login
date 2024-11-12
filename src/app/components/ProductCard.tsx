@@ -9,8 +9,6 @@ const isProd = process.env.NODE_ENV === "production";
 interface Props {
   product: Product;
 }
-// export const isProduction = process.env.NODE_ENV === "production";
-const env = process.env.NODE_ENV === "production";
 
 const ProductCard: FC<Props> = ({ product }) => {
   console.log(basePath);
