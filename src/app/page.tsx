@@ -9,7 +9,7 @@ const dummyProducts = [
     mrp: 29.99,
     salePrice: 19.99,
     percentOff: 33,
-    thumbnail: "/assets/Beef-Open.png",
+    thumbnail: "./assets/Beef-Open.png",
   },
   {
     id: "2",

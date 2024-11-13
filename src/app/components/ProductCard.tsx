@@ -17,7 +17,7 @@ const ProductCard: FC<Props> = ({ product }) => {
   return (
     <div className="w-full bg-white shadow-md rounded overflow-hidden relative">
       <div className="w-full aspect-square relative">
-        {isProd ? (
+        {/* {isProd ? (
           <Image
             src={`${basePath}/${product.thumbnail}`}
             alt=""
@@ -25,13 +25,19 @@ const ProductCard: FC<Props> = ({ product }) => {
             fill
           />
         ) : (
-          <Image
-            src={product.thumbnail}
-            alt=""
-            className="rounded object-cover"
-            fill
-          />
-        )}
+
+        )} */}
+        {/* <Image
+          src={product.thumbnail}
+          alt=""
+          className="rounded object-cover"
+          fill
+        /> */}
+        <img
+          src={product.thumbnail}
+          alt=""
+          style={{ width: "auto", height: "auto" }}
+        />
       </div>
 
       <div className="p-4 space-y-2">

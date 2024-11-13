@@ -37,6 +37,7 @@ const page: FC<Props> = (props) => {
                 {isProd ? (
                   <Image
                     src={`${basePath}/${cartItem.product.thumbnail}`}
+                    priority
                     alt=""
                     width={64}
                     height={64}
