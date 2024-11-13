@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import { FC } from "react";
 import { Product } from "../context/CartProvider";
 import BuyingOptions from "./BuyingOptions";
@@ -7,9 +7,9 @@ interface Props {
   product: Product;
 }
 
-const basePath = "/add_to_cart_without_login";
+// const basePath = "/add_to_cart_without_login";
 
-const isProd = process.env.NODE_ENV === "production";
+// const isProd = process.env.NODE_ENV === "production";
 
 const ProductCard: FC<Props> = ({ product }) => {
   // console.log(basePath);
