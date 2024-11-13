@@ -1,4 +1,4 @@
-// import Image from "next/image";
+import Image from "next/image";
 import { FC } from "react";
 import { Product } from "../context/CartProvider";
 import BuyingOptions from "./BuyingOptions";
@@ -7,9 +7,9 @@ interface Props {
   product: Product;
 }
 
-// const basePath = "/add_to_cart_without_login";
+const basePath = "/add_to_cart_without_login";
 
-// const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 
 const ProductCard: FC<Props> = ({ product }) => {
   // console.log(basePath);
@@ -17,7 +17,7 @@ const ProductCard: FC<Props> = ({ product }) => {
   return (
     <div className="w-full bg-white shadow-md rounded overflow-hidden relative">
       <div className="w-full aspect-square relative">
-        {/* {isProd ? (
+        {isProd ? (
           <Image
             src={`${basePath}/${product.thumbnail}`}
             alt=""
@@ -25,19 +25,13 @@ const ProductCard: FC<Props> = ({ product }) => {
             fill
           />
         ) : (
-
-        )} */}
-        {/* <Image
-          src={product.thumbnail}
-          alt=""
-          className="rounded object-cover"
-          fill
-        /> */}
-        <img
-          src={product.thumbnail}
-          alt=""
-          style={{ width: "auto", height: "auto" }}
-        />
+          <Image
+            src={product.thumbnail}
+            alt=""
+            className="rounded object-cover"
+            fill
+          />
+        )}
       </div>
 
       <div className="p-4 space-y-2">
